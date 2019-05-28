@@ -1,0 +1,9 @@
+@import 'https://fonts.googleapis.com/css?family=Nunito:200,600';
+
+$font-family-sans-serif: 'Nunito';
+
+html,
+body {
+    font-family: $font-family-sans-serif, sans-serif;
+    margin: 0;
+}
