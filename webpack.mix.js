@@ -1,4 +1,5 @@
 const Dotenv = require('dotenv-webpack');
+const tailwindcss = require('tailwindcss');
 const mix = require('laravel-mix');
 const path = require('path');
 
@@ -15,6 +16,10 @@ const path = require('path');
 
 mix.js('resources/ts/app.ts', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
+    .options({
+        processCssUrls: false,
+        postCss: [tailwindcss()],
+    })
     .browserSync({
         proxy: process.env.APP_URL,
         notify: false
