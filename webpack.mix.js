@@ -21,8 +21,8 @@ mix.js('resources/ts/app.ts', 'public/js')
     })
     .webpackConfig({
         output: {
-            filename: '[name].[contenthash].js',
-            chunkFilename: '[name].[contenthash].js'
+            filename: '[name].js',
+            chunkFilename: '[name].js'
         },
 
         module: {
@@ -45,5 +45,7 @@ mix.js('resources/ts/app.ts', 'public/js')
 
         plugins: [
             new Dotenv()
-        ]
-    });
+        ],
+    })
+    .version()
+    .extract();
