@@ -21,7 +21,4 @@ module.exports = {
             version: 'detect',
         },
     },
-    overrides: {
-        excludedFiles: ['*.js'],
-    },
 };
